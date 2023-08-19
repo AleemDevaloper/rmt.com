@@ -1,0 +1,221 @@
+#header {
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: position 1s;
+    -ms-transition: position 1s;
+    -o-transition: position 1s;
+    transition: all 0.1s ease;
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                font-family: 'FuturaBT-Book';
+                font-size: 20px;
+                line-height: 22px;
+                color: #fff;
+                padding: 0.5rem 1.5rem;
+                @include max(1700px) {
+                    padding: 0.5rem 1rem;
+                }
+                @include max(1600px) {
+                    padding: 0.5rem 0.7rem;
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+                @include max(1280px) {
+                    padding: 0.5rem 0.5rem;
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+                @include max(1200px) {
+                    padding: 15px 0 !important;
+                    border-bottom: 1px solid #000;
+                    color: #1b1464;
+                }
+            }
+        }
+    }
+    .btn-bar {
+        margin: 0 0 0 20px;
+        @include max(1200px) {
+            margin: 0;
+            padding: 15px 0;
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                margin: 0 20px 0 0;
+                .l-btn {
+                    font-size: 18px;
+                    line-height: 20px;
+                    color: #fff;
+                    border: 2px solid #ff007a;
+                    padding: 12px 30px;
+                    border-radius: 50px;
+                    text-transform: uppercase;
+                    @include max(1400px) {
+                        font-size: 16px;
+                        line-height: 18px;
+                        padding: 10px 20px;
+                    }
+                    @include max(1200px) {
+                        color: #1b1464;
+                    }
+                }
+                .r-btn {
+                    font-size: 18px;
+                    line-height: 20px;
+                    color: #fff;
+                    border: 2px solid #ff007a;
+                    padding: 12px 30px;
+                    border-radius: 50px;
+                    text-transform: uppercase;
+                    background: #ff007a;
+                    @include max(1400px) {
+                        font-size: 16px;
+                        line-height: 18px;
+                        padding: 10px 20px;
+                    }
+                }
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .navbar-toggler {
+        padding: 0;
+        &:focus {
+            box-shadow: none;
+        }
+        #navicon {
+            position: relative;
+            width: 25px;
+            height: 25px;
+            padding: 0;
+            border-radius: 5px;
+            span {
+                display: block;
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                background: #fff;
+                border-radius: 9px;
+                opacity: 1;
+                margin: 0 auto;
+                transform: rotate(0deg);
+                transition: 0.25s ease-in-out;
+                right: 0; 
+                @include max(510px) {
+                    background: #1b1464;
+                }
+                &:first-child {
+                    top: 9px;
+                }
+                &:last-child {
+                    top: 21px;
+                    width: 65%;
+                }
+                &:nth-child(2) {
+                    top: 15px;
+                }
+            }
+            &.open {
+                span {
+                    @include max(992px) {
+                        background: #1b1464;
+                    }
+                    &:first-child {
+                        transform: rotate(135deg);
+                        top: 15px;
+                    }
+                    &:last-child {
+                        transform: rotate(-135deg);
+                        top: 15px;
+                        width: 100%;
+                    }
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+    @include max(1200px) {
+        .navbar-collapse {
+            background: #f2f1f6;
+            padding: 15px 15px;
+            box-shadow: 0 0 10px #00000025;
+            margin: 15px 0 10px;
+            border-radius: 10px;
+            @include max(767px) {
+                padding: 0 15px 15px;
+            }
+        }
+    }
+    @include max(575px) {
+        .navbar-brand {
+            img {
+                width: 200px;
+            }
+        }
+    }
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        animation: smoothScroll 1s forwards;
+        background: #fff;
+        right: 0;
+        width: 100%;
+        padding: 1px 15px;
+        z-index: 9;
+        @include max(1200px) {
+            padding: 0px 15px 15px;
+        }
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    font-family: 'FuturaBT-Book';
+                    font-size: 20px;
+                    line-height: 22px;
+                    color: #1b1464;
+                    padding: 0.5rem 1.5rem;
+                    @include max(1700px) {
+                        padding: 0.5rem 1rem;
+                    }
+                    @include max(1600px) {
+                        padding: 0.5rem 0.7rem;
+                        font-size: 18px;
+                        line-height: 20px;
+                    }
+                    @include max(1280px) {
+                        padding: 0.5rem 0.5rem;
+                        font-size: 16px;
+                        line-height: 26px;
+                    }
+                    @include max(1200px) {
+                        padding: 15px 0 !important;
+                        border-bottom: 1px solid #000;
+                        color: #1b1464;
+                    }
+                }
+            }
+        }
+        .l-btn {
+            color: #1b1464 !important;
+        }
+        #navicon {
+            span {
+                background: #1b1464;
+            }
+        }
+    }
+    @keyframes smoothScroll {
+        0% {
+            transform: translateY(-40px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+}

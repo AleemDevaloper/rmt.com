@@ -1,0 +1,160 @@
+#footer {
+    background: url(../images/bg02.png) no-repeat top center;
+    .f-top {
+        padding: 6rem 8rem 3rem;
+        border-bottom: 1px solid #494383;
+        @include max(1800px) {
+            padding: 6rem 4rem 3rem;
+        }
+        @include max(1400px) {
+            padding: 6rem 2rem 3rem;
+        }
+        @include max(575px) {
+            padding: 4rem 15px 2rem;
+        }
+        .f-log {
+            text-align: center;
+            margin: 0 0 30px;
+            @include max(575px) {
+                img {
+                    width: 300px;
+                }
+            }
+        }
+        .s-link {
+            margin: 0 0 30px;
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                li {
+                    margin: 0 15px 0 0;
+                    a {
+                        color: #fff;
+                        font-size: 20px;
+                        width: 50px;
+                        height: 50px;
+                        border: 1px solid #494383;
+                        border-radius: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &:hover {
+                            background: #ff007a;
+                        }
+                    }
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .p-link {
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include max(575px) {
+                    flex-wrap: wrap;
+                }
+                li {
+                    margin: 0 40px 0 0;
+                    @include max(767px) {
+                        margin: 0 20px 0 0;
+                    }
+                    @include max(575px) {
+                        margin: 0;
+                        width: 33.33%;
+                        text-align: center;
+                    }
+                    a {
+                        font-size: 20px;
+                        line-height: 28px;
+                        color: #fff;
+                        font-family: 'FuturaBT-Book';
+                        text-transform: uppercase;
+                        @include max(1400px) {
+                            font-size: 18px;
+                            line-height: 22px;
+                        }
+                        @include max(1150px) {
+                            font-size: 16px;
+                            line-height: 18px;
+                        }
+                        @include max(767px) {
+                            font-size: 15px;
+                            line-height: 17px;
+                        }
+                        @include max(575px) {
+                            font-size: 13px;
+                        }
+                    }
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .b-area {
+        padding: 2rem 8rem;
+        @include max(1800px) {
+            padding: 2rem 4rem;
+        }
+        @include max(1400px) {
+            padding: 2rem 2rem;
+        }
+        @include max(575px) {
+            padding: 1rem 15px;
+        }
+        p {
+            font-size: 20px;
+            line-height: 22px;
+            color: #fff;
+            font-family: 'FuturaBT-Book';
+            @include max(1400px) {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            @include max(1150px) {
+                font-size: 14px;
+                line-height: 18px;
+            }
+            @include max(992px) {
+                margin: 0 0 15px;
+                text-align: center;
+            }
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            @include max(992px) {
+                justify-content: center;
+            }
+            li {
+                margin: 0 20px 0 0;
+                @include max(1400px) {
+                    margin: 0 20px 0 0;
+                }
+                a {
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #fff;
+                    font-family: 'FuturaBT-Book';
+                    @include max(1400px) {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                    @include max(1150px) {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                }
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
